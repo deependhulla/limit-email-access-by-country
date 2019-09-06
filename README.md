@@ -2,20 +2,30 @@
 Limit IMAP4 , POP3, SMTP services access for users based on country. (To reduce hack attack)
 
 ## Challenges
-aaaa
+Daily we have seen on Mail-server Login-attempt being made from unknown location for exsiting users and common-email ids.
+Blocking all ips based on fail2ban software was turning out to be huge list and also there was Load on MYSQL as all attacker where trying to access 2 attempt from random new IPs.
+For IT was blocking access many time for country specific IPs in iptables. which was also turning out to be problem. as list was growing bigger.
+ 
 ## Solution
-bbb
+We had beeing knowing about ip2location website/services, on finding they offer Lite version we thought of using it.
+we where knowing about Nginx offering mail-proxy for load-balance and custom auth. So we thought of building using php as we thought it would be easier for deloper to latter upgrade code with more feature faster.
+
 ## Ideal Setup for This project.
-ccc
+We started to wrote this project few month back with vision to latter open-source it once majourcountry block is ready for all 3 services.
+
+
+
 ## Used Setup details.
 ddd
 ## Quick Details for Understanding for implementation
-- We have setup Postifx / Dovevot Mailserver on Debian 9.x 64bit Linux.
-- We have installed Apache2 +LetsEncrypt SSL &  GroupOffice for WebBased access.
+- We have setup Postifx / Dovevot with Vmail Mailserver on Debian 9.x 64bit Linux using postfixadmin 
+- For easy understanding have used dummy name  mail.deependhulla.com in conf files for reference. 
+- We have installed Apache2 +LetsEncrypt SSL &  GroupOffice for WebBased access with two-factor Auth from any location.
 - With only 110/143/25 Port configured only for localhost use only.
+- We used our existing MX infra for filtering Mails and to deliver to this server.
 
 ### Now  we installed Nginx on Debian OS by stopping apache2 servies as nginx while installation try to use port 80.
-### And latter to disable/binding port 80/443 Services by removing file from site-enable
+### And latter  disabled binding of port 80/443 services by removing file from site-enable.
 
 ,,,
 service apache2 stop
@@ -25,6 +35,7 @@ rm /etc/nginx/sites-enabled/default
 service apache2 start
 ,,,
 
+## We added below mail section in nginx you can check in (rootdir/etc/nginx/nginx.conf)
 
 #### nginx.conf update for configuring Nginx as mail-proxy for 
 - IMAP4-ssl port 993 
