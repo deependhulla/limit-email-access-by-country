@@ -2,28 +2,29 @@
 Limit IMAP4 , POP3, SMTP services access for users based on country. (To reduce hack attack)
 
 ## Challenges
-
+aaaa
 ## Solution
-
+bbb
 ## Ideal Setup for This project.
-
+ccc
 ## Used Setup details.
-
+ddd
 ## Quick Details for Understanding for implementation
-We have setup Postifx / Dovevot Mailserver on Debian 9.x 64bit Linux.
-We have installed Apache2 +LetsEncrypt SSL &  GroupOffice for WebBased access.
-With only below Port configured only for localhost use only.
+- We have setup Postifx / Dovevot Mailserver on Debian 9.x 64bit Linux.
+- We have installed Apache2 +LetsEncrypt SSL &  GroupOffice for WebBased access.
+- With only 110/143/25 Port configured only for localhost use only.
 
-Latter We installed Nginx on Debian and disabled port 80/443 Services by removing file :
+### Now  we installed Nginx on Debian OS by stopping apache2 servies as nginx while installation try to use port 80.
+### And latter to disable/binding port 80/443 Services by removing file from site-enable
+
 ,,,
-# stop apache2 as nginx while installation try to use port 80.
 service apache2 stop
 apt-get install nginx-full
 service nginx stop
 rm /etc/nginx/sites-enabled/default
 service apache2 start
 ,,,
-## 
+
 
 #### nginx.conf update for configuring Nginx as mail-proxy for 
 - IMAP4-ssl port 993 
