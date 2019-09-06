@@ -4,19 +4,18 @@ Limit IMAP4 , POP3, SMTP services access for users based on country. (To reduce 
 ## Challenges
 Daily we have seen on Mail-server Login-attempt being made from unknown location for exsiting users and common-email ids.
 Blocking all ips based on fail2ban software was turning out to be huge list and also there was Load on MYSQL as all attacker where trying to access 2 attempt from random new IPs.
-For IT was blocking access many time for country specific IPs in iptables. which was also turning out to be problem. as list was growing bigger.
+IT-Team  was blocking access; many time for country specific IP-Range in iptables. which was also turning out to be problem. as list was growing bigger and not possible when you offer support for multiple-clients on muiltiple-server using open-source.
  
 ## Solution
 We had beeing knowing about ip2location website/services, on finding they offer Lite version we thought of using it.
-we where knowing about Nginx offering mail-proxy for load-balance and custom auth. So we thought of building using php as we thought it would be easier for deloper to latter upgrade code with more feature faster.
+we where knowing about Nginx offering mail-proxy for load-balance and custom auth. we went with PHP as we thought it would be easier for developers  latter to upgrade code with more feature faster. (like admin panel and using sqlite/MySQL for web-based front-end or have city/regin option in future too)
 
 ## Ideal Setup for This project.
-We started to wrote this project few month back with vision to latter open-source it once majourcountry block is ready for all 3 services.
+We started to wrote this project few month back with vision to latter open-source it 
+once majour country block is ready for all 3 services and was tested with SSL load.
+We wrote from angle to use in front of any existing mail-server offering imap/pop/smtp services, be  it same-host or different-vm/server.
 
 
-
-## Used Setup details.
-ddd
 ## Quick Details for Understanding for implementation
 - We have setup Postifx / Dovevot with Vmail Mailserver on Debian 9.x 64bit Linux using postfixadmin 
 - For easy understanding have used dummy name  mail.deependhulla.com in conf files for reference. 
@@ -25,7 +24,7 @@ ddd
 - We used our existing MX infra for filtering Mails and to deliver to this server.
 
 ### Now  we installed Nginx on Debian OS by stopping apache2 servies as nginx while installation try to use port 80.
-### And latter  disabled binding of port 80/443 services by removing file from site-enable.
+### And latter disabled binding of port 80/443 services by removing file from site-enable.
 
 ,,,
 service apache2 stop
@@ -97,3 +96,6 @@ service apache2 start
 
 }
 ```
+
+## How comes the code which was under apache2/php (/var/www/html/mailauth/nginxmailauth.php) 
+
