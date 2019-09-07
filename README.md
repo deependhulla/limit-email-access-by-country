@@ -98,7 +98,7 @@ service apache2 start
 }
 ```
 
-## How comes the code which was under apache2/php (/var/www/html/mailauth/nginxmailauth.php) 
+## Now comes the code which was under apache2/php (/var/www/html/mailauth/nginxmailauth.php) 
 
 ```
 <?php
@@ -218,5 +218,7 @@ if($gloginpro=="pop3"){header('Auth-Port: 110');}
 
 ?>
 ```
+
+###This site or product includes IP2Location LITE data available from http://www.ip2location.com.
 
 ## This Code is working model and used in production.
