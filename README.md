@@ -27,13 +27,13 @@ We wrote from angle to use in front of any existing mail-server offering IMAP/PO
 ### Now  we installed Nginx on Debian OS by stopping apache2 servies as nginx while installation try to use port 80.
 ### And latter disabled binding of port 80/443 services by removing file from site-enable for nginx.
 
-,,,
+```
 service apache2 stop
 apt-get install nginx-full
 service nginx stop
 rm /etc/nginx/sites-enabled/default
 service apache2 start
-,,,
+```
 
 ## After basic installation of packages, We added below mail section in nginx you can check in (rootdir/etc/nginx/nginx.conf)
 
