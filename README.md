@@ -18,9 +18,9 @@ We wrote from angle to use in front of any existing mail-server offering IMAP/PO
 
 
 ## Quick Details for Understanding for implementation
-- We have set up Postfix / Dovecot with Vmail Mailserver on Debian 9.x 64bit Linux using PostfixAdmin.
-- For easy understanding have used dummy name  mail.deependhulla.com in conf files for reference.
-- We have installed Apache2 + LetsEncrypt SSL &  GroupOffice for web-based access with two-factor Auth from any location.
+- We have set up Postfix / Dovecot with Vmail Mailserver on Debian 9.x 64bit Linux using [GroupOffice-MailServer](https://groupoffice.readthedocs.io/en/latest/install/debian.html#mailserver).
+- For easy understanding have used dummy name  *mail.deependhulla.com* in conf files for reference.
+- We have installed Apache2 + LetsEncrypt SSL &  [GroupOffice](https://groupoffice.readthedocs.io/en/latest/install/debian.html) for web-based access with two-factor Auth from any location.
 - With only 110/143/25 Port configured only for localhost use.
 - We used our existing MX infra for filtering Mails and to deliver to this server.
 
@@ -221,6 +221,7 @@ if($gloginpro=="pop3"){header('Auth-Port: 110');}
 
 ### This site or product includes IP2Location LITE data available from http://www.ip2location.com.
 
-## Licence : [GNU General Public License v3.0](../master/LICENCE)
+### LICENSE : [GNU General Public License v3.0](../master/LICENSE)
+
 ### This Code is working model and used in production by us.
 
