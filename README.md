@@ -8,7 +8,7 @@ IT-Team was blocking access; many time for country-specific IP-Range in iptables
 
  
 ## Solution
-We had beeing knowing about ip2location website/services, on finding they offer Lite version we thought of using it.
+We had being knowing about [ip2location](https://www.ip2location.com) website/services, on finding they offer [Lite version](https://lite.ip2location.com/database/ip-country) & [PHP development library](https://www.ip2location.com/development-libraries/ip2location/php), we thought of using it.
 we were knowing about Nginx offering mail-proxy for load-balance and custom auth. we went with PHP as we thought it would be easier for developers latter to upgrade code with more feature faster. (like admin panel and using SQLite/MySQL for web-based front-end or have city/region option in future too)
 
 ## Idea
@@ -35,7 +35,7 @@ rm /etc/nginx/sites-enabled/default
 service apache2 start
 ```
 
-## After basic installation of packages, We added below mail section in nginx you can check in [/etc/nginx/nginx.conf](../master/rootdir/etc/nginx/nginx.conf)
+### After basic installation of packages, We added below mail section in nginx you can check in [/etc/nginx/nginx.conf](../master/rootdir/etc/nginx/nginx.conf)
 
 #### nginx.conf update for configuring Nginx as mail-proxy for 
 - IMAP4-ssl port 993 
