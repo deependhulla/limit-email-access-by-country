@@ -223,5 +223,5 @@ if($gloginpro=="pop3"){header('Auth-Port: 110');}
 
 ### LICENSE : [GNU General Public License v3.0](../master/LICENSE)
 
-### This Code is working model and used in production by us.
+### This Code is working model and used in production.
 
