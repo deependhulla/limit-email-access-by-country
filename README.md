@@ -221,5 +221,6 @@ if($gloginpro=="pop3"){header('Auth-Port: 110');}
 
 ### This site or product includes IP2Location LITE data available from http://www.ip2location.com.
 
+## Licence : [GNU General Public License v3.0](../master/LICENCE)
 ### This Code is working model and used in production by us.
 
