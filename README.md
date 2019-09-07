@@ -98,9 +98,9 @@ service apache2 start
 }
 ```
 
-## Now comes the code which was under apache2/php (/var/www/html/mailauth/nginxmailauth.php) 
+### Now comes the main code which is under apache2/php: [/var/www/html/mailauth/nginxmailauth.php](../blob/master/rootdir/var/www/html/mailauth/nginxmailauth.php)
 
-```
+```php
 <?php
 
 ## ref : https://www.php.net/manual/en/function.imap-open.php
