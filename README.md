@@ -1,5 +1,5 @@
 # limit-email-access-by-country
-Limit IMAP4 , POP3, SMTP services access for users based on country. (To reduce hack attack)
+Limit IMAP4 , POP3, SMTP service access for users based on country. (To helps reducing hack attack & support for DLP)
 
 ## Challenges
 Daily we have seen on Mail-server Login-attempt being made from the unknown location for existing users and common-email ids.
