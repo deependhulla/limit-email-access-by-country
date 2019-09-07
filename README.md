@@ -35,7 +35,7 @@ rm /etc/nginx/sites-enabled/default
 service apache2 start
 ```
 
-## After basic installation of packages, We added below mail section in nginx you can check in (rootdir/etc/nginx/nginx.conf)
+## After basic installation of packages, We added below mail section in nginx you can check in [/etc/nginx/nginx.conf](../master/rootdir/etc/nginx/nginx.conf)
 
 #### nginx.conf update for configuring Nginx as mail-proxy for 
 - IMAP4-ssl port 993 
